@@ -20,7 +20,9 @@
     <maven.compiler.target>17</maven.compiler.target>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <junit.version>5.14.1</junit.version>
+    <testng.version>7.12.0</testng.version>
     <selenide.version>7.16.0</selenide.version>
+    <selenium.version>4.43.0</selenium.version>
     <owner.version>1.0.12</owner.version>
   </properties>
 
@@ -34,9 +36,19 @@
         <scope>import</scope>
       </dependency>
       <dependency>
+        <groupId>org.testng</groupId>
+        <artifactId>testng</artifactId>
+        <version>${testng.version}</version>
+      </dependency>
+      <dependency>
         <groupId>com.codeborne</groupId>
         <artifactId>selenide</artifactId>
         <version>${selenide.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.seleniumhq.selenium</groupId>
+        <artifactId>selenium-java</artifactId>
+        <version>${selenium.version}</version>
       </dependency>
       <dependency>
         <groupId>org.aeonbits.owner</groupId>
