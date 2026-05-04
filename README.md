@@ -25,13 +25,17 @@
 
 ### Запуск тестов
 
-#### JUnit + Selenide:
+#### JUnit + Selenide
 
 ```shell
 mvn clean test -pl ui-selenide -am
 ```
 
-#### TestNG + Selenium:
+#### TestNG + Selenium
+
+**ПРИМЕЧАНИЕ.** Для запуска старых версий Selenium необходимо указать путь к каталогу с вебдрайвером. В новых версиях это
+необязательно. Тем не менее в случае появления ошибки при инициализации вебдрайвера следует при запуске тестов передать
+путь к нему с помощью ключа `-Dwebdriver.chrome.driver=<путь/до/вебдрайвера>`.
 
 ```shell
 mvn clean test -pl ui-selenium -am

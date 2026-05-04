@@ -1,14 +1,12 @@
 package me.vodarga.selenium.test;
 
 import static me.vodarga.core.config.CoreConfig.CORE_CFG;
-import static me.vodarga.selenium.config.SeleniumConfig.SELENIUM_CFG;
 
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.BeforeSuite;
 
 public abstract class SeleniumBaseTest {
 
@@ -16,11 +14,6 @@ public abstract class SeleniumBaseTest {
 
   public WebDriver getDriver() {
     return driverThreadLocal.get();
-  }
-
-  @BeforeSuite
-  public void beforeSuite() {
-    System.setProperty("webdriver.chrome.driver", SELENIUM_CFG.webdriverPath());
   }
 
   @BeforeMethod
